@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Theu/cyPlantBE/issues"
   },
-  "homepage": "https://github.com/Theu/cyPlantBE#readme"
+  "homepage": "https://github.com/Theu/cyPlantBE#readme",
+  "dependencies": {
+    "koa": "^2.5.2"
+  }
 }
