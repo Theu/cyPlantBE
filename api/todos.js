@@ -18,6 +18,22 @@ export function createApi(getDB) {
             };
 
             return await getDB().put(todo);
+        },
+        readTodo: async(id) => {
+            return await getDB().get(id);
+        },
+        updateTodo: async(requestedTitle, requestedId) => {
+            const title = requestedTitle;
+            const entryToUpdate = await getDB.get(requestedId);
+
+            return getDB().put({
+                _id: requestedId,
+                _rev: entryToUpdate._rev,
+                title: title
+            });
+        },
+        deleteTodo: async(id) => {
+            return await getDB().remove(await getDB().get(id));
         }
-    }
+    };
 }

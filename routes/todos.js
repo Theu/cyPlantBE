@@ -4,7 +4,10 @@ import { createApi } from '../api/todos';
 
 const {
     getTodos,
-    createTodo
+    createTodo,
+    readTodo,
+    updateTodo,
+    deleteTodo,
 } = createApi(getDB);
 
 import {
